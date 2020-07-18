@@ -15,7 +15,7 @@ map <M-Down> :m +1<CR>
 map <M-Up> :m -2<CR>
 imap <C-CR> <C-o>o
 map <C-Tab> :tabn<CR> "切标签页
-map <C-h> :%s///g
+map <C-h> :%s///g<Left><Left><Left>
 
 map <C-Left> h
 imap <C-Left> <ESC>hi
