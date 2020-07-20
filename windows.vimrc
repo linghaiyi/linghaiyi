@@ -14,14 +14,20 @@ imap <C-CR> <C-o>o
 map <C-Tab> :tabn<CR> "切标签页
 map <C-h> :%s///g
 
-map <C-Left> h
-imap <C-Left> <ESC>hi
-map <C-Right> l
-imap <C-Right> <ESC>li
-map <C-Up> k
-imap <C-Up> <ESC>ki
-map <C-Down> j
-imap <C-Down> <ESC>ji
+" 方便窗口跳转
+map <C-Left> <C-w>h
+imap <C-Left> <ESC><C-w>hi
+map <C-Right> <C-w>l
+imap <C-Right> <ESC><C-w>li
+map <C-Up> <C-w>k
+imap <C-Up> <ESC><C-w>ki
+map <C-Down> <C-w>j
+imap <C-Down> <ESC><C-w>ji
+
+" 删除一对括号
+nnoremap <F3> ma%x`ax 
+nn <F5> :!g++ % -o %< -Wall
+nn <F7> :!%< < input
 
 let g:netrw_browse_split = 4
 call plug#begin('~/.vim/plugged')
