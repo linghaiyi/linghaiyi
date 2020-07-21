@@ -1,4 +1,4 @@
-se ai si ci nu rnu ru ls=2 mouse=a go= ts=4 sw=4 tabstop=4
+se ai si ci nu rnu ru ls=2 mouse=a go= ts=4 sw=4 tabstop=4 cul cuc
 set backspace=indent,eol,start
 
 if has('nvim')
