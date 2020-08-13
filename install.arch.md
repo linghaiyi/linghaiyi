@@ -10,7 +10,8 @@ fdisk /dev/sda
 	w
 (其他)回车
 ```sh
-mkfs.ext4 /dev/sda1 #(挂载)
+mkfs.ext4 /dev/sda1 
+mount /dev/sdX1 /mnt #(挂载)
 ls /mnt #(检查lost+found文件)
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
