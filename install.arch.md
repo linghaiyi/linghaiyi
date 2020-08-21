@@ -1,6 +1,6 @@
 ```sh
 timedatectl set-ntp true
-fdisk -l 找到硬盘(如/dev/sda)
+fdisk -l #找到硬盘(如/dev/sda)
 fdisk /dev/sda
 ```
 (m时)
@@ -23,7 +23,26 @@ echo "zh_CN.UTF-8 UTF-8" >>/etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >/etc/locale.conf
 echo "arch" >/etc/hostname
-curl archserver.top/hosts -L >/etc/hosts
+# curl archserver.top/hosts -L >/etc/hosts
+# 建议同时在 /etc/hosts 中设置 hostname：
+```
+
+``` 
+/etc/hosts 
+```
+
+```sh
+#
+# /etc/hosts: static lookup table for host names
+#
+	
+#<ip-address>	<hostname.domain.org>	<hostname>
+127.0.0.1	localhost.localdomain	localhost	 myhostname
+::1		localhost.localdomain	localhost	 myhostname
+```
+
+```sh
+
 mkinitcpio -P
 passwd #设置密码
 pacman -S grub dhcpcd
